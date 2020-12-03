@@ -1,11 +1,9 @@
-# coding: utf-8
-
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name = 'administrate-field-belongs_to_search'
-  gem.version = '0.4.0'.freeze
+  gem.version = '0.7.0'.freeze
   gem.authors = ['Klas Eskilson']
   gem.email = ['klas.eskilson@gmail.com']
   gem.homepage = 'https://github.com/fishbrain/administrate-field-belongs_to_search'
@@ -17,14 +15,15 @@ Gem::Specification.new do |gem|
   gem.test_files = `git ls-files -z -- {spec}/*`.split("\x0")
 
   gem.add_dependency 'administrate', '>= 0.3', '< 1.0'
-  gem.add_dependency 'rails', '>= 4.2', '< 5.2'
+  gem.add_dependency 'jbuilder', '~> 2'
+  gem.add_dependency 'rails', '>= 4.2', '< 7.0'
   gem.add_dependency 'selectize-rails', '~> 0.6'
 
   gem.add_development_dependency 'coveralls', '~> 0'
   gem.add_development_dependency 'factory_girl', '~> 4.8'
-  gem.add_development_dependency 'rake', '~> 12.0'
+  gem.add_development_dependency 'rake', '~> 13.0'
   gem.add_development_dependency 'rspec', '~> 3.4'
-  gem.add_development_dependency 'rubocop', '~> 0'
+  gem.add_development_dependency 'rubocop', '~> 0.76.0'
   gem.add_development_dependency 'simplecov', '~> 0'
   gem.add_development_dependency 'sqlite3', '~> 1.3'
 
